@@ -1,5 +1,5 @@
 // Setup empty JS object to act as endpoint for all routes
-projectData = [];
+projectData = {};
 
 // Require Express to run server and routes
 const express = require('express');
@@ -27,7 +27,7 @@ const server = app.listen(port,function(){
 // get function
 app.get('/all',function(req,res){
     res.send(projectData);
-    projectData = [];
+    
 });
 
 // post function
@@ -36,10 +36,9 @@ app.post('/add',function(req,res){
     console.log(`server side data is ${data}`);
 
     //date , temp , feel(input)
-     entry= {
-         date : data.date ,
-         temp : data.temp,
-         feel : data.feels
-     };
-     projectData.push(entry);
+     projectData['date']=data.date;
+     projectData['temp']=data.temp;
+     projectData['feelings']=data.feels;
+    res.send(projectData);
+    //console.log("the project data is :", projectData);
 });

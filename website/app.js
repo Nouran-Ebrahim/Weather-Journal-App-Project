@@ -10,10 +10,13 @@ document.getElementById('generate').addEventListener('click',performAction);
 
 function performAction(e){
     const zipCode = document.getElementById('zip').value;
+    if(zipCode === ""){
+        alert("please enter the zipcode");
+    }
     const feelings= document.getElementById('feelings').value;
     getWeather(baseURL,zipCode,apiKey)
     .then(function(data){
-         console.log(data);
+         console.log(" the api data is :",data);
          postData('/add',{date : newDate , temp : data.main.temp , feels : feelings})
          
     })
@@ -33,7 +36,7 @@ const getWeather= async (baseURL,zip,key)=>{
           }
 }
 const postData = async ( url = '', data = {})=>{
-    console.log(data);
+    console.log("the post data is:",data);
        const res = await fetch(url, {
        method: 'POST', 
        credentials: 'same-origin',
@@ -52,14 +55,15 @@ const postData = async ( url = '', data = {})=>{
        console.log("error", error);
        };
    };
-   // function to get  project data
+   // function to GET  project data
    const updateUI= async ()=>{
          const request = await fetch('/all');
          try{
              const allData = await request.json();
-             document.getElementById('date').innerHTML= `date: ${ allData[0].date} `;
-             document.getElementById('temp').innerHTML= `temprature: ${ allData[0].temp}` ;
-             document.getElementById('content').innerHTML= `feelings: ${allData[0].feel}`;
+             console.log("all data is",allData);
+             document.getElementById('date').innerHTML= `date: ${ allData.date} `;
+             document.getElementById('temp').innerHTML= `temprature: ${ allData.temp}` ;
+             document.getElementById('content').innerHTML= `feelings: ${allData.feelings}`;
          }
          catch(error) {
             console.log("error", error);
