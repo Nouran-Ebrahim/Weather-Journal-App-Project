@@ -1,5 +1,6 @@
 body{
     background: #fffff8;
+    margin: 0px;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
@@ -8,7 +9,8 @@ body{
     grid-auto-rows: minmax(150px, auto);
     /* grid-template-columns:  */
     height:100vh;
-    background: #f23557;
+    background-image: url("towards-a-weather-proactive-supply-chain-hero-image-2272x960px.jpg.optimal.jpg");
+    background-size: cover;
     color: #f0d43a;
     justify-content: center;
     grid-gap: 1em;
@@ -16,41 +18,48 @@ body{
     font-family: 'Oswald', sans-serif;
 }
 
-.holder{
 
-}
 
 .entry{
     background: rgba(59, 74, 107, .4);
-}
-
-#entryHolder{
-
+    width: 69%;
 }
 
 #date{
-
+   color: black;
+   font-weight: bolder;
 }
 
 #temp{
-
+color: black;
+font-weight: bolder;
 }
 
 #content{
-
+color: black;
+font-weight: bolder;
 }
 
 .headline {
-
+    margin-top: 5%;
+    font-size: 50px;
+    color: purple;
+    font-weight: bolder;
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
 }
 .title{
-
+     color: darkblue;
+     font-size: 25px;
+     font-weight: bolder;
 }
 
 /*  Basic Styling To Override Default For Basic HTML Elements */
 label{
     display:block;
-    font-size: 27px;
+    color: darkblue;
+    font-size: 25px;
+    font-weight: bolder;
 }
 
 input{
@@ -58,21 +67,28 @@ input{
     height: 60px;
     width: 320px;
     background:#22b2da;
-    color: #f0d43a;
+    color: black;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
     border: none;
 }
 
 button{
-    width: 400px;
+    width: 200px;
     height: 100px;
-    background: #3b4a6b;
-    color: #f0d43a;
+    background:purple;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 100px;
     font-size: 26px;
     font-family: 'Oswald', sans-serif;
-    border: none;
+    border-radius: 30px;
     box-shadow: 2px 4px 5px #444;
+}
+button:hover{
+    background-color:#22b2da ;
+    color: darkblue;
 }
 h1{
     font-size: 36px;
@@ -80,7 +96,7 @@ h1{
 
 textarea{
     background:#22b2da;
-    color: #f0d43a;
+    color: black;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
 }
@@ -93,19 +109,19 @@ button:focus {
 }
 /* Style for Placeholder Text*/
 ::placeholder { /* Firefox, Chrome, Opera */ 
-    color: #f0d43a; 
+    color: purple;
     font-family: 'Oswald', sans-serif;
 
 } 
   
 :-ms-input-placeholder { /* Internet Explorer 10-11 */ 
-    color: #f0d43a; 
+    color: purple;
     font-family: 'Oswald', sans-serif;
 
 } 
   
 ::-ms-input-placeholder { /* Microsoft Edge */ 
-    color: #f0d43a; 
+    color: purple;
     font-family: 'Oswald', sans-serif;
 
 } 

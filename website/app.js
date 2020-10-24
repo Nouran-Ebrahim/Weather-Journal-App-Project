@@ -1,6 +1,7 @@
 /* Global Variables */
 const baseURL='https://api.openweathermap.org/data/2.5/weather?zip=';
-const apiKey='&appid=e37fd6d5a9b259574b4421917f0e57d0';
+const apiKey='&appid=e37mm6d5a9f259174b4421917f0e57d0';
+/* i use not real api key and you must put your api key here */
 // Create a new date instance dynamically with JS
 let d = new Date();
 let newDate = d.getMonth()+1 +'.'+ d.getDate()+'.'+ d.getFullYear();
